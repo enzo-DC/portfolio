@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, ArrowUp, Send } from "lucide-react";
+import { Github, Linkedin, ArrowUp, Send, Mail } from "lucide-react";
 
 export function Footer() {
     const scrollToTop = () => {
@@ -9,81 +9,93 @@ export function Footer() {
     };
 
     return (
-        <footer id="contact" className="py-48 px-6 md:px-12 border-t border-foreground/10 bg-dots relative overflow-hidden">
-            {/* Decorative large text */}
-            <div className="absolute -bottom-24 -left-20 opacity-[0.02] text-[20vw] font-serif select-none pointer-events-none line-clamp-1 italic">
-                Esprit_Technique
+        <footer id="contact" className="py-32 md:py-64 px-6 md:px-12 lg:px-24 border-t border-foreground/5 bg-dots relative overflow-hidden">
+            {/* Background Text */}
+            <div className="absolute -bottom-10 -right-20 opacity-[0.015] text-[30vw] font-serif select-none pointer-events-none italic leading-none">
+                Contact.
             </div>
 
             <div className="max-w-[1800px] mx-auto relative z-10">
-                <div className="editorial-grid mb-32">
-                    <div className="col-span-12 lg:col-span-7 space-y-12">
-                        <span className="text-[10px] font-bold tracking-[0.4em] text-accent uppercase flex items-center gap-2">
-                            <span className="w-8 h-[1px] bg-accent" /> Protocole_Contact
-                        </span>
-                        <h2 className="text-5xl md:text-9xl font-serif tracking-tighter leading-none italic">
-                            Disponibilité <br /> <span className="text-stroke not-italic opacity-40 italic">immédiate.</span>
-                        </h2>
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 mb-32">
+                    <div className="lg:col-span-7 space-y-12">
+                        <div className="space-y-6">
+                            <span className="text-[10px] font-bold tracking-[0.5em] text-accent uppercase flex items-center gap-4">
+                                <span className="w-12 h-[1px] bg-accent" /> Connect_Protocol
+                            </span>
+                            <h2 className="text-5xl md:text-8xl lg:text-9xl font-serif tracking-tighter leading-none">
+                                Parlons de <br /> <span className="italic text-stroke hover:text-foreground transition-all duration-1000 cursor-default">demain.</span>
+                            </h2>
+                        </div>
 
-                        <div className="pt-12">
-                            <a
+                        <div className="pt-8">
+                            <motion.a
                                 href="mailto:enzocouteau.pro@gmail.com"
-                                className="group inline-flex items-center gap-6 text-2xl md:text-4xl hover:text-accent transition-all duration-700"
+                                whileHover={{ scale: 1.02 }}
+                                className="group inline-flex items-center gap-6 px-10 py-6 border border-foreground/10 rounded-full glass hover:border-accent/40 transition-all duration-500"
                             >
-                                enzocouteau.pro@gmail.com
-                                <div className="p-4 border border-foreground/10 rounded-full group-hover:bg-accent group-hover:text-background transition-all">
-                                    <Send size={20} />
+                                <span className="text-xl md:text-2xl font-light tracking-tight group-hover:text-accent transition-colors">
+                                    enzocouteau.pro@gmail.com
+                                </span>
+                                <div className="p-4 bg-foreground/5 rounded-full group-hover:bg-accent group-hover:text-background transition-all duration-500">
+                                    <Mail size={18} />
                                 </div>
-                            </a>
+                            </motion.a>
                         </div>
                     </div>
 
-                    <div className="col-span-12 lg:col-start-9 lg:col-span-4 flex flex-col justify-end gap-16 mt-20 lg:mt-0">
-                        <div className="space-y-4">
-                            <p className="text-xs font-mono opacity-40 uppercase tracking-widest ">Réseaux_Sociaux</p>
-                            <div className="flex gap-8 text-sm font-medium tracking-tight">
-                                <a href="https://github.com/zoen-ct" target="_blank" className="hover:text-accent transition-all flex items-center gap-2 hover-underline">
-                                    <Github size={14} /> GitHub
+                    <div className="lg:col-span-4 lg:col-start-9 flex flex-col justify-end gap-16">
+                        <div className="space-y-6">
+                            <p className="text-[10px] font-mono opacity-40 uppercase tracking-[0.3em]">Networking</p>
+                            <div className="flex flex-col gap-4 text-sm font-medium">
+                                <a href="https://github.com/zoen-ct" target="_blank" className="hover:text-accent transition-all flex items-center gap-3 hover-underline w-fit">
+                                    <Github size={16} strokeWidth={1.5} /> GitHub.com/zoen-ct
                                 </a>
-                                <a href="https://linkedin.com/in/enzo-couteau" target="_blank" className="hover:text-accent transition-all flex items-center gap-2 hover-underline">
-                                    <Linkedin size={14} /> LinkedIn
+                                <a href="https://linkedin.com/in/enzo-couteau" target="_blank" className="hover:text-accent transition-all flex items-center gap-3 hover-underline w-fit">
+                                    <Linkedin size={16} strokeWidth={1.5} /> LinkedIn.com/in/enzo-couteau
                                 </a>
                             </div>
                         </div>
 
-                        <div className="space-y-4">
-                            <p className="text-xs font-mono opacity-40 uppercase tracking-widest">Heure_Locale</p>
-                            <p className="text-sm font-light uppercase tracking-widest">{new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })} Paris, FR</p>
+                        <div className="space-y-6">
+                            <p className="text-[10px] font-mono opacity-40 uppercase tracking-[0.3em]">Localisation</p>
+                            <div className="text-sm font-light uppercase tracking-widest flex items-center gap-3">
+                                <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
+                                <span>Paris, France / 2025 Edition</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row justify-between items-center pt-24 border-t border-foreground/5 gap-8">
-                    <div className="flex flex-col gap-1">
-                        <span className="text-[9px] font-mono opacity-30 uppercase tracking-[0.2em]">© 2024 Conçu avec Précision</span>
-                        <span className="text-[9px] font-mono opacity-30 uppercase tracking-[0.2em]">Réalisé par Enzo Couteau®</span>
+                <div className="flex flex-col md:flex-row justify-between items-center pt-16 border-t border-foreground/10 gap-12">
+                    <div className="flex flex-col gap-2">
+                        <span className="text-[9px] font-mono opacity-30 uppercase tracking-[0.4em]">© 2025 Precision Engineering</span>
+                        <span className="text-[9px] font-mono opacity-30 uppercase tracking-[0.4em]">Designed by Enzo Couteau</span>
                     </div>
 
                     <button
                         onClick={scrollToTop}
-                        className="group flex flex-col items-center gap-4 text-[9px] font-bold tracking-[0.4em] uppercase"
+                        className="group flex flex-col items-center gap-4 text-[9px] font-bold tracking-[0.6em] uppercase transition-all"
                     >
-                        HAUT
-                        <div className="p-4 border border-foreground/10 rounded-full group-hover:border-accent group-hover:-translate-y-2 transition-all duration-500">
-                            <ArrowUp size={14} />
+                        <div className="p-5 border border-foreground/10 rounded-full group-hover:border-accent group-hover:-translate-y-2 transition-all duration-700 glass">
+                            <ArrowUp size={16} />
                         </div>
+                        <span className="opacity-0 group-hover:opacity-40 transition-opacity">Back to top</span>
                     </button>
 
-                    <div className="flex flex-col items-end gap-1">
-                        <span className="text-[9px] font-mono opacity-30 uppercase tracking-[0.2em]">Version_0.8.2_Bêta</span>
-                        <div className="flex gap-1">
-                            <div className="w-1 h-1 bg-accent/20 rounded-full" />
-                            <div className="w-1 h-1 bg-accent/20 rounded-full" />
-                            <div className="w-1 h-1 bg-accent rounded-full animate-pulse" />
+                    <div className="flex flex-col items-end gap-2 text-[9px] font-mono opacity-40 tracking-[0.2em] uppercase">
+                        <div className="flex gap-2 items-center">
+                            <span>Status: Available</span>
+                            <div className="flex gap-1">
+                                <div className="w-0.5 h-3 bg-accent" />
+                                <div className="w-0.5 h-3 bg-accent/40" />
+                                <div className="w-0.5 h-3 bg-accent/20" />
+                            </div>
                         </div>
+                        <span>Build_V1.2.0</span>
                     </div>
                 </div>
             </div>
         </footer>
     );
 }
+
