@@ -87,7 +87,7 @@ export function About() {
                     </div>
 
                     {/* Right Column: Bio & Skills */}
-                    <div className="lg:col-span-7 space-y-16">
+                    <div id="skills" className="lg:col-span-7 space-y-16 scroll-mt-32">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
                             <div className="space-y-8 pt-6 border-t border-foreground/10">
                                 <span className="text-[10px] font-bold tracking-[0.4em] uppercase opacity-40">Compétences</span>
