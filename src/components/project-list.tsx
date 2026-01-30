@@ -22,11 +22,12 @@ const projects = [
         color: "#111111"
     },
     {
-        title: "Kids Hub",
+        title: "Sebi",
         type: "Educational WebApp",
-        tech: ["Interactive", "Node.js", "UI"],
-        year: "2023",
-        link: "#",
+        tech: ["Interactive", "Node.js", "Next.js", "Tailwind CSS"],
+        year: "2025",
+        link: "https://sebi-kids.vercel.app/",
+        image: "/images/sebi.png",
         color: "#171717"
     },
     {
@@ -106,7 +107,7 @@ function ProjectItem({ project, index }: { project: any; index: number }) {
             onMouseMove={handleMouseMove}
             className="group relative border-b border-foreground/10 py-12 md:py-20 cursor-none"
         >
-            <a href={project.link} className="flex flex-col md:flex-row md:items-center justify-between gap-8 relative z-10 transition-all duration-700">
+            <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex flex-col md:flex-row md:items-center justify-between gap-8 relative z-10 transition-all duration-700">
                 <div className="flex items-start md:items-center gap-6 md:gap-12">
                     <span className="text-[11px] font-mono opacity-20 mt-2 md:mt-0 select-none">0{index + 1}</span>
                     <div className="flex flex-col gap-2">
@@ -145,7 +146,10 @@ function ProjectItem({ project, index }: { project: any; index: number }) {
                         <div className="relative w-[400px] h-[260px] rounded-lg overflow-hidden glass border-2 border-accent/20 shadow-2xl">
                             <div
                                 className="w-full h-full bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-1000"
-                                style={{ backgroundColor: project.color }}
+                                style={{
+                                    backgroundColor: project.color,
+                                    backgroundImage: project.image ? `url(${project.image})` : undefined
+                                }}
                             />
                             <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-transparent mix-blend-overlay" />
                             <div className="absolute top-4 left-4 flex gap-2">
