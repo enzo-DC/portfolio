@@ -144,6 +144,16 @@
     -webkit-backdrop-filter: blur(10px);
   }
 
+  /* Robust Dark Mode Image Handling */
+  html[data-theme='dark'] .dark-mode-invert {
+    filter: invert(1);
+    mix-blend-mode: screen;
+  }
+
+  html:not([data-theme='dark']) .dark-mode-invert {
+    mix-blend-mode: multiply;
+  }
+
   .bg-dots {
     background-image: radial-gradient(var(--color-border-subtle) 1px, transparent 1px);
     background-size: 32px 32px;

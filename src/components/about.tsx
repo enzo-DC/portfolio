@@ -48,7 +48,7 @@ export function About() {
                                 src="/images/abstract.png"
                                 alt="Technical Abstract"
                                 fill
-                                className="object-cover scale-110 hover:scale-100 transition-transform duration-1000"
+                                className="object-cover scale-110 hover:scale-100 transition-transform duration-1000 dark-mode-invert"
                             />
                             <div className="absolute inset-0 bg-accent/5 mix-blend-overlay" />
                         </motion.div>
