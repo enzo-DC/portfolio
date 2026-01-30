@@ -65,7 +65,7 @@ export function Hero() {
             <motion.div style={{ y: y1 }} className="absolute top-20 left-12 hidden lg:block select-none pointer-events-none">
                 <div className="technical-line w-64 mb-3" />
                 <span className="text-[10px] font-mono opacity-50 uppercase tracking-[0.5em] font-medium">
-                    Creative Developer
+                    Student Developer
                 </span>
             </motion.div>
 

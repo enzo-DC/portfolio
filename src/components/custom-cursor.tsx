@@ -54,10 +54,10 @@ export function CustomCursor() {
     }, [cursorX, cursorY]);
 
     return (
-        <div className="fixed inset-0 pointer-events-none z-[99999] overflow-hidden">
+        <div className="hidden md:block fixed inset-0 pointer-events-none z-[99999] overflow-hidden">
             {/* Main Dot */}
             <motion.div
-                className="absolute top-0 left-0 w-2 h-2 bg-accent rounded-full"
+                className="absolute top-0 left-0 w-3 h-3 bg-[var(--foreground)] rounded-full z-10 pointer-events-none"
                 style={{
                     x: cursorXSpring,
                     y: cursorYSpring,
@@ -71,7 +71,7 @@ export function CustomCursor() {
 
             {/* Outer Ring */}
             <motion.div
-                className="absolute top-0 left-0 w-8 h-8 border border-accent/30 rounded-full"
+                className="absolute top-0 left-0 w-8 h-8 border-[1.5px] border-[var(--foreground)] rounded-full z-0 pointer-events-none"
                 style={{
                     x: ringXSpring,
                     y: ringYSpring,
@@ -80,7 +80,7 @@ export function CustomCursor() {
                 }}
                 animate={{
                     scale: isPressed ? 1.5 : isHovering ? 2.5 : 1,
-                    opacity: isHovering ? 0.6 : 0.3,
+                    opacity: isHovering ? 1 : 0.4,
                     borderWidth: isHovering ? "1px" : "1.5px"
                 }}
             />

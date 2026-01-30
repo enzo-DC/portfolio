@@ -73,7 +73,6 @@
 
   html {
     scroll-behavior: smooth;
-    cursor: none;
   }
 
   body {
@@ -93,9 +92,13 @@
     font-weight: 500;
   }
 
-  a,
-  button {
-    cursor: none;
+  @media (min-width: 768px) {
+
+    html,
+    a,
+    button {
+      cursor: none;
+    }
   }
 }
 
