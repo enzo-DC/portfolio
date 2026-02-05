@@ -19,6 +19,12 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Enzo Couteau | Développeur Web",
   description: "Portfolio de Enzo Couteau, Étudiant Développeur Web spécialisé dans le design éditorial et les interfaces précises.",
+  icons: {
+    icon: [
+      { media: '(prefers-color-scheme: light)', url: '/logo/logo-light-mode.svg' },
+      { media: '(prefers-color-scheme: dark)', url: '/logo/logo-dark-mode.svg' },
+    ],
+  },
 };
 
 export default function RootLayout({

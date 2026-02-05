@@ -6,36 +6,93 @@ import { ArrowUpRight } from "lucide-react";
 
 const projects = [
     {
-        title: "Clone X",
-        type: "Architecture System",
-        tech: ["Next.js", "MongoDB", "Framer"],
-        year: "2024",
-        link: "#",
+        title: "Vera",
+        type: "Fact-checking",
+        tech: ["Angular", "Node.js", "Tailwind CSS", "Vera API"],
+        year: "2025",
+        link: "https://vera-app-client.vercel.app/",
+        image: "/images/vera.png",
         color: "#0a0a0a"
     },
     {
-        title: "EcoMotion",
-        type: "Sustainable Platform",
-        tech: ["SEO", "Performance", "React"],
+        title: "Bot Vera",
+        type: "Fact-checking, Bot Telegram",
+        tech: ["Python", "Vera API"],
+        year: "2025",
+        link: "https://github.com/enzo-DC/bot",
+        image: "/images/vera.png",
+        color: "#0a0a0a"
+    },
+    {
+        title: "Lalachante",
+        type: "Vitrines, Back-office",
+        tech: ["Laravel", "PHP", "Tailwind CSS", "MySQL", "Livewire"],
         year: "2024",
-        link: "#",
+        link: "https://www.lalachante.fr/",
+        image: "/images/lalachante.png",
+        color: "#0a0a0a"
+    },
+    {
+        title: "Visu",
+        type: "App de suivi de séries et films",
+        tech: ["Flutter", "Firebase", "TMDb API"],
+        year: "2025",
+        link: "https://github.com/zoen-ct/visu",
+        image: "/images/visu.png",
         color: "#111111"
     },
     {
         title: "Sebi",
-        type: "Educational WebApp",
-        tech: ["Interactive", "Node.js", "Next.js", "Tailwind CSS"],
+        type: "Application éducative",
+        tech: ["Interactive", "Node.js", "Next.js", "Tailwind CSS", "PWA"],
         year: "2025",
         link: "https://sebi-kids.vercel.app/",
         image: "/images/sebi.png",
         color: "#171717"
     },
     {
-        title: "Minimal Bio",
-        type: "Personal Design",
-        tech: ["Minimalism", "Portfolio"],
-        year: "2024",
-        link: "#",
+        title: "Tools for Schools",
+        type: "Passassion d'examen",
+        tech: ["Django", "Python", "Tailwind CSS", "React", "PostgreSQL", "Docker"],
+        year: "2026",
+        link: "https://github.com/iMxSquash/django_projet",
+        image: "/images/django_scool.png",
+        color: "#171717"
+    },
+    {
+        title: "Garde Temps",
+        type: "bibliothèque de montres",
+        tech: ["Django", "Python", "Tailwind CSS", "Vue", "PostgreSQL"],
+        year: "2026",
+        link: "https://github.com/enzo-DC/garde_temps",
+        image: "/images/garde_temps.png",
+        color: "#171717"
+    },
+    {
+        title: "Echec Pro",
+        type: "Jeu d'échecs",
+        tech: ["Next.js", "Tailwind CSS", "Chess.js", "Chessboard.js", "PWA"],
+        year: "2026",
+        link: "https://echecs-app.vercel.app/",
+        image: "/images/echec_pro.png",
+        color: "#1c1c1c"
+    },
+    {
+        title: "Anomi",
+        type: "Media sur l'animation",
+        tech: ["Next.js", "Tailwind CSS", "MongoDB", "Supabase", "PWA"],
+        year: "2025",
+        link: "https://anomi-six.vercel.app/",
+        image: "/images/anomi.webp",
+        color: "#1c1c1c"
+    },
+    {
+        title: "Elkair",
+        type: "Site vitrine",
+        tech: ["Wordpress", "PHP", "Tailwind CSS", "MySQL"],
+        year: "2025",
+        link: "https://github.com/zoen-ct/Elkhair",
+        image: "/images/elkair.jpg",
         color: "#1c1c1c"
     }
 ];
@@ -71,7 +128,7 @@ export function ProjectList() {
                     className="mt-24 border-t border-foreground/10 pt-12 flex justify-between items-center"
                 >
                     <span className="text-[10px] font-mono opacity-30 uppercase tracking-[0.5em]">Archives complètes bientôt disponibles</span>
-                    <a href="#" className="group flex items-center gap-4 text-[11px] font-bold uppercase tracking-widest hover:text-accent transition-colors">
+                    <a href="https://github.com/enzo-DC" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 text-[11px] font-bold uppercase tracking-widest hover:text-accent transition-colors">
                         Voir plus sur GitHub
                         <ArrowUpRight size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </a>

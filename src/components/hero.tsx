@@ -63,7 +63,7 @@ export function Hero() {
         <section ref={containerRef} className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 overflow-hidden bg-dots pt-32 md:pt-40">
             {/* Éléments de fond techniques avec parallaxe */}
             <motion.div style={{ y: y1 }} className="absolute top-20 left-12 hidden lg:block select-none pointer-events-none">
-                <div className="technical-line w-64 mb-3" />
+                <div className="technical-line w-50 mb-3" />
                 <span className="text-[10px] font-mono opacity-50 uppercase tracking-[0.5em] font-medium">
                     Student Developer
                 </span>

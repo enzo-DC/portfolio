@@ -24,18 +24,20 @@ export function Navbar() {
             {/* Brand */}
             <div className="pointer-events-auto">
                 <a href="#" className="flex flex-col group">
-                    <motion.span
+                    <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
-                        className="text-xl md:text-2xl font-serif tracking-tighter italic font-medium leading-none"
                     >
-                        Enzo Couteau.
-                    </motion.span>
-                    <motion.div
-                        initial={{ width: 0 }}
-                        animate={{ width: "100%" }}
-                        className="h-[1px] bg-foreground/10 group-hover:bg-accent transition-colors"
-                    />
+                        {mounted ? (
+                            <img
+                                src={theme === "dark" ? "/logo/logo-complet-dark.svg" : "/logo/logo-complet-light.svg"}
+                                alt="Enzo Couteau Logo"
+                                className="h-8 md:h-10 w-auto" // Adjust height as needed to match text size approx
+                            />
+                        ) : (
+                            <div className="h-8 md:h-10 w-32" /> // Placeholder to prevent layout shift
+                        )}
+                    </motion.div>
                 </a>
             </div>
 
